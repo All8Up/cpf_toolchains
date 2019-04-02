@@ -1,4 +1,4 @@
-include ("${CMAKE_CURRENT_LIST_DIR}/Polly/vs-15-2017-win64.cmake")
+include ("${CMAKE_CURRENT_LIST_DIR}/Polly/vs-16-2019-win64.cmake")
 
 set_property (GLOBAL PROPERTY USE_FOLDERS ON)
 add_definitions (-D_CRT_SECURE_NO_WARNINGS -D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS)
