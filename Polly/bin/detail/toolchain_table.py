@@ -1,8 +1,8 @@
-# Copyright (c) 2014, Ruslan Baratov & Luca Martini
-# Copyright (c) 2014, Michele Caini
-# Copyright (c) 2017, Robert Nitsch
-# Copyright (c) 2018, David Hirvonen
-# Copyright (c) 2018, Richard Hodges
+# Copyright (c) 2014-2019, Ruslan Baratov & Luca Martini
+# Copyright (c) 2014-2019, Michele Caini
+# Copyright (c) 2017-2019, Robert Nitsch
+# Copyright (c) 2018-2019, David Hirvonen
+# Copyright (c) 2018-2019, Richard Hodges
 # All rights reserved.
 
 import os
@@ -407,7 +407,31 @@ if os.name == 'nt':
           vs_version='16'
       ),
       Toolchain(
+          'vs-16-2019-cxx14',
+          'Visual Studio 16 2019',
+          arch='x86',
+          vs_version='16'
+      ),
+      Toolchain(
+          'vs-16-2019-cxx17',
+          'Visual Studio 16 2019',
+          arch='x86',
+          vs_version='16'
+      ),
+      Toolchain(
           'vs-16-2019-win64',
+          'Visual Studio 16 2019',
+          arch='amd64',
+          vs_version='16'
+      ),
+      Toolchain(
+          'vs-16-2019-win64-cxx14',
+          'Visual Studio 16 2019',
+          arch='amd64',
+          vs_version='16'
+      ),
+      Toolchain(
+          'vs-16-2019-win64-cxx17',
           'Visual Studio 16 2019',
           arch='amd64',
           vs_version='16'
@@ -462,10 +486,12 @@ if platform.system() == 'Linux':
 if platform.system() == 'Darwin':
   toolchain_table += [
       Toolchain('ios', 'Xcode'),
+      Toolchain('ios-12-1-dep-9-0-device-bitcode-cxx17', 'Xcode', ios_version='12.1'),
       Toolchain('ios-12-0-dep-11-0-arm64', 'Xcode', ios_version='12.0'),
       Toolchain('ios-12-1-dep-11-0-arm64', 'Xcode', ios_version='12.1'),
       Toolchain('ios-12-1-dep-12-0-arm64-cxx17', 'Xcode', ios_version='12.1'),
       Toolchain('ios-12-1-dep-9-3-arm64', 'Xcode', ios_version='12.1'),
+      Toolchain('ios-12-1-dep-9-3-armv7', 'Xcode', ios_version='12.1'),
       Toolchain('ios-12-1-dep-9-3', 'Xcode', ios_version='12.1'),
       Toolchain('ios-11-4-dep-9-3-arm64', 'Xcode', ios_version='11.4'),
       Toolchain('ios-11-4-dep-9-3-armv7', 'Xcode', ios_version='11.4'),
@@ -720,6 +746,7 @@ if os.name == 'posix':
       Toolchain('gcc-4-8-c11', 'Unix Makefiles'),
       Toolchain('gcc-4-8-pic', 'Unix Makefiles'),
       Toolchain('gcc-4-8-pic-hid-sections', 'Unix Makefiles'),
+      Toolchain('gcc-4-8-pic-hid-sections-cxx11-c11', 'Unix Makefiles'),
       Toolchain('gcc-pic-hid-sections', 'Unix Makefiles'),
       Toolchain('gcc-pic-hid-sections-lto', 'Unix Makefiles'),
       Toolchain('gcc-5-pic-hid-sections-lto', 'Unix Makefiles'),
@@ -728,6 +755,7 @@ if os.name == 'posix':
       Toolchain('gcc-5-cxx14-c11', 'Unix Makefiles'),
       Toolchain('gcc-6-32bit-cxx14', 'Unix Makefiles'),
       Toolchain('gcc-7', 'Unix Makefiles'),
+      Toolchain('gcc-7-cxx11-pic', 'Unix Makefiles'),
       Toolchain('gcc-7-cxx14', 'Unix Makefiles'),
       Toolchain('gcc-7-cxx14-pic', 'Unix Makefiles'),
       Toolchain('gcc-7-cxx17', 'Unix Makefiles'),
